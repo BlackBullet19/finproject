@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
 public class UserServiceImpl implements UserService{
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Override
     public List<ProgramUser> list() {

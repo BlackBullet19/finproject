@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 public class DocumentController {
 
     @Autowired
-    DocumentService documentService;
+    private DocumentService documentService;
 
     @GetMapping
     public ResponseEntity<?> list() {

@@ -15,7 +15,7 @@ import java.util.NoSuchElementException;
 public class UserController {
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @GetMapping
     public ResponseEntity<?> list() {

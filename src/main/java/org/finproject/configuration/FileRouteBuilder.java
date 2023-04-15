@@ -1,7 +1,6 @@
 package org.finproject.configuration;
 
 import org.apache.camel.builder.RouteBuilder;
-import org.finproject.entity.Document;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -23,12 +22,5 @@ public class FileRouteBuilder extends RouteBuilder {
                 .process("storageProcessor")
                 .to(url)
                 .stop();
-
-        rest("/documents")
-                .routeId("fileFromRest")
-                .post("/{userId}")
-                .outType(Document.class)
-                .to(url);
-
     }
 }

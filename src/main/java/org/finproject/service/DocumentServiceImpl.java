@@ -17,10 +17,10 @@ import java.util.NoSuchElementException;
 public class DocumentServiceImpl implements DocumentService {
 
     @Autowired
-    DocumentRepository documentRepository;
+    private DocumentRepository documentRepository;
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @Override
     public void registerDocument(Exchange exchange) {
